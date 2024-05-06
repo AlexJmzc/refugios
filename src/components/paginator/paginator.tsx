@@ -19,8 +19,8 @@ export const Paginator = ({ refugees, data, setRefugees }: PaginatorProps) => {
     return (
         <>
             <div className="flex flex-col items-center">
-                <span className="text-sm text-gray-700 dark:text-gray-400">
-                    Mostrando <span className="font-semibold text-gray-900 dark:text-white">{refugees + 1}</span> a <span className="font-semibold text-gray-900 dark:text-white">{refugees + 6 > data.length ? data.length : refugees + 6}</span> de <span className="font-semibold text-gray-900 dark:text-white">{data.length}</span> Resultados
+                <span className="text-sm text-white">
+                    Mostrando <span className="font-semibold text-gray-900 dark:text-white">{refugees + 1}</span> - <span className="font-semibold text-gray-900 dark:text-white">{refugees + 6 > data.length ? data.length : refugees + 6}</span> de <span className="font-semibold text-gray-900 dark:text-white">{data.length}</span> Resultados
                 </span>
                 <div className="inline-flex mt-2 xs:mt-0">
                     {
