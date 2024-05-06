@@ -1,24 +1,19 @@
 import { Refugee } from '../../assets/interfaces/refugee';
 
+import { flags } from '../../assets/flags/flags';
+
 interface CardProps {
   refugee: Refugee;
 }
 
 export const Card = ({ refugee }: CardProps) => {
 
-  const flags = (country: String) => {
-    
-    switch(country.toUpperCase()) {
-        case "ECUADOR":
-          return <span className="w-5 h-5 icon-[openmoji--flag-ecuador]"></span>;
+  const getFlags = (country: String) => {
+    const countryFormatted = country.toUpperCase();
 
-        case "ARGENTINA":
-          return <span className="w-5 h-5 icon-[twemoji--flag-for-flag-argentina]"></span>
+    const flag = flags.find(flag => flag.name === countryFormatted);
 
-        default:
-          return <span className=""></span>
-          
-    }
+    return flag?.url;
   }
 
   return (
@@ -31,21 +26,20 @@ export const Card = ({ refugee }: CardProps) => {
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-center">{refugee.name}</h5>
         </a>
 
-        <a href={refugee.web} className='flex gap-x-3 justify-center items-center'>
-          {flags(refugee.country)}
-          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-center">{refugee.country}</h5>
+        <a href={refugee.web} className='flex gap-x-3 justify-center items-center mb-2'>
+          <img className='w-6 h-6' src={getFlags(refugee.country)} alt={refugee.country} />
         </a>
 
         <a href={refugee.web}>
-          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-center">{refugee.state}, {refugee.city}</h5>
+          <h5 className="mb-2 text-base font-semibold tracking-tight text-center">{refugee.state}, {refugee.city}</h5>
         </a>
 
         <a href={refugee.web}>
-          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-center">{refugee.address}</h5>
+          <h5 className="mb-2 text-base font-semibold tracking-tight text-center">{refugee.address}</h5>
         </a>
 
         <a href={refugee.web}>
-          <h5 className="mb-2 text-2xl font-semibold tracking-tight text-center">{refugee.phone}</h5>
+          <h5 className="mb-2 text-base font-semibold tracking-tight text-center">{refugee.phone}</h5>
         </a>
 
         <div className='flex flex-col items-center'>
