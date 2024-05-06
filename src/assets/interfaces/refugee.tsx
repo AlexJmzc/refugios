@@ -3,9 +3,9 @@ export interface Refugee {
     name: string,
     web: string,
     country: string,
-    state: string,
-    city: string,
-    direction: string,
+    state?: string,
+    city?: string,
+    address: string,
     phone: string,
     img: string
 }
