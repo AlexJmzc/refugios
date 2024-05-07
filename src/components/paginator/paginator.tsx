@@ -20,11 +20,11 @@ export const Paginator = ({ refugees, data, setRefugees }: PaginatorProps) => {
         <>
             <div className="flex flex-col items-center">
                 <span className="text-sm text-white">
-                    Mostrando <span className="font-semibold text-gray-900 dark:text-white">{refugees + 1}</span> - <span className="font-semibold text-gray-900 dark:text-white">{refugees + 6 > data.length ? data.length : refugees + 6}</span> de <span className="font-semibold text-gray-900 dark:text-white">{data.length}</span> Resultados
+                    Mostrando <span className="font-semibold text-gray-900 dark:text-white">{refugees + 1}</span> - <span className="font-semibold text-gray-900 dark:text-white">{refugees + 8 > data.length ? data.length : refugees + 8}</span> de <span className="font-semibold text-gray-900 dark:text-white">{data.length}</span> Resultados
                 </span>
                 <div className="inline-flex mt-2 xs:mt-0">
                     {
-                        refugees >= 6
+                        refugees >= 8
                             ?
                             <button 
                                 className="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 rounded-s hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
@@ -40,7 +40,7 @@ export const Paginator = ({ refugees, data, setRefugees }: PaginatorProps) => {
                     }
 
                     {
-                        refugees < data.length - 6
+                        refugees < data.length - 8
                             ?
                             <button 
                                 className="flex items-center justify-center px-3 h-8 text-sm font-medium text-white bg-gray-800 border-0 border-s border-gray-700 rounded-e hover:bg-gray-900 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
