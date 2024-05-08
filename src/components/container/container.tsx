@@ -35,7 +35,7 @@ export const Container = () => {
   }, [search])
 
   return (
-    <div className='bg-secondary min-h-screen pb-4'>
+    <div className='bg-gradient-to-tr from-lime-400 via-emerald-500 to-teal-700 min-h-screen pb-4'>
       <div className='flex flex-col items-center justify-center'>
         <Search setSearch={setSearch}/>
       </div>
