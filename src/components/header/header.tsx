@@ -1,9 +1,14 @@
 import Logo from '../../assets/img/logo.png';
 
 export const Header = () => {
+
+    const redirect = () => {
+        window.location.href = '/';
+    }
+
     return (
         <div className='bg-primary w-screen flex justify-around'>
-            <div className='flex gap-x-3 items-center'>
+            <div className='flex gap-x-3 items-center cursor-pointer' onClick={redirect}>
                 <img className='w-20 h-20' src={Logo} alt="Refugees logo" />
             </div>
 
