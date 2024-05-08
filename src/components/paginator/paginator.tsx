@@ -20,7 +20,7 @@ export const Paginator = ({ refugees, data, setRefugees }: PaginatorProps) => {
         <>
             <div className="flex flex-col items-center">
                 <span className="text-sm text-white">
-                    Mostrando <span className="font-semibold text-gray-900 dark:text-white">{refugees + 1}</span> - <span className="font-semibold text-gray-900 dark:text-white">{refugees + 8 > data.length ? data.length : refugees + 8}</span> de <span className="font-semibold text-gray-900 dark:text-white">{data.length}</span> Resultados
+                    Mostrando <span className="font-semibold text-gray-900 dark:text-white">{data.length > 0 ? refugees + 1 : refugees}</span> - <span className="font-semibold text-gray-900 dark:text-white">{refugees + 8 > data.length ? data.length : refugees + 8}</span> de <span className="font-semibold text-gray-900 dark:text-white">{data.length}</span> Resultados
                 </span>
                 <div className="inline-flex mt-2 xs:mt-0">
                     {
