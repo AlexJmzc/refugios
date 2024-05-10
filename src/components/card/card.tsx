@@ -17,11 +17,11 @@ export const Card = ({ refugee }: CardProps) => {
   }
 
   return (
-    <div className="max-w-sm bg-secondary w-max my-6 border-4 border-primary rounded-lg transition-transform hover:scale-105">
+    <div className="max-w-sm bg-secondary w-max my-6 border-4 border-yellow-400 rounded-lg transition-transform hover:scale-105">
       <a className='flex justify-center' href={refugee.web}>
         <img className="w-full h-28 rounded-t-md" src={refugee.img} alt={refugee.name} />
       </a>
-      <div className="p-5 bg-tertiary rounded-b-md">
+      <div className="p-5 bg-yellow-400 rounded-b-md">
         <a href={refugee.web}>
           <h5 className="mb-2 text-lg font-semibold tracking-tight text-center">{refugee.name}</h5>
         </a>
@@ -31,15 +31,15 @@ export const Card = ({ refugee }: CardProps) => {
         </a>
 
         <a href={refugee.web}>
-          <h5 className="mb-2 text-base font-semibold tracking-tight text-center">{refugee.state}, {refugee.city}</h5>
+          <h5 className="mb-2 text-base font-medium tracking-tight text-center">{refugee.state}, {refugee.city}</h5>
         </a>
 
         <a href={refugee.web}>
-          <h5 className="mb-2 text-base font-semibold tracking-tight text-center">{refugee.address}</h5>
+          <h5 className="mb-2 text-base font-medium tracking-tight text-center">{refugee.address}</h5>
         </a>
 
         <a href={refugee.web}>
-          <h5 className="mb-2 text-base font-semibold tracking-tight text-center">{refugee.phone}</h5>
+          <h5 className="mb-2 text-base font-medium tracking-tight text-center">{refugee.phone}</h5>
         </a>
 
         <div className='flex flex-col items-center'>
