@@ -9,11 +9,11 @@ interface PaginatorProps {
 
 export const Paginator = ({ refugees, data, setRefugees }: PaginatorProps) => {
     const nextPage = () => {
-        setRefugees(refugees + 6);
+        setRefugees(refugees + 8);
     }
 
     const previousPage = () => {
-        setRefugees(refugees - 6);
+        setRefugees(refugees - 8);
     }
 
     return (
