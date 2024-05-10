@@ -1,6 +1,7 @@
 import { Header } from '../header/header';
 import { Container } from '../container/container';
 import { Information } from '../information/information';
+import { Footer } from '../footer/footer';
 
 export const Main = () => {
   return (
@@ -8,6 +9,7 @@ export const Main = () => {
         <Header/>
         <Information/>
         <Container/>
+        <Footer/>
     </>
   )
 }
