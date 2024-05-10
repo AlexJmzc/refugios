@@ -11,7 +11,7 @@ module.exports = {
         tertiary: "#E9C46A",
         quaternary: "#F4A261",
         fifth: '#E76F51'
-      },
+      }
     },
   },
 
