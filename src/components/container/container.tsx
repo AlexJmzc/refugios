@@ -25,8 +25,6 @@ export const Container = () => {
       const matchesCity =
         search === "" || city?.includes(search);
 
-      console.log(search)
-
       return matchesCountry || matchesState || matchesCity;
     });
 
@@ -35,8 +33,8 @@ export const Container = () => {
   }, [search])
 
   return (
-    <div className='bg-primary min-h-screen w-screen pb-4'>
-      <div className='flex flex-col items-center justify-center'>
+    <div className='bg-gray-300 min-h-screen w-screen py-6' id='refugees'>
+      <div className='flex flex-col items-center justify-center pb-6'>
         <Search setSearch={setSearch}/>
       </div>
   
