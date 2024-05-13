@@ -1,5 +1,3 @@
-import Logo from '../../assets/img/logoMain.png';
-
 export const Header = () => {
 
     const scrollToSection = (sectionId: string) => {
