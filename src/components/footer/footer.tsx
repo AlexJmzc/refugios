@@ -8,9 +8,9 @@ export const Footer = () => {
 
   return (
     <div className='w-screen bg-gray-200 py-4' id='help'>
-      <div className='bg-gradient-to-r from-red-200 via-blue-300 to-green-300 grid grid-cols-2 rounded-2xl mx-7 py-6 gap-y-3'>
+      <div className='bg-gradient-to-r from-red-100 via-gray-100 to-violet-100  grid grid-cols-2 rounded-2xl mx-7 py-6 gap-y-3'>
         <div className='flex justify-center items-center'>
-          <img className='w-2/3 rounded-full' src={FooterImage} alt="Help" />
+          <img className='w-2/3 rounded-e-full' src={FooterImage} alt="Help" />
         </div>
 
         <div className='flex flex-col items-center gap-y-5'>
