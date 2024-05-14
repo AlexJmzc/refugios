@@ -7,8 +7,8 @@ export const Header = () => {
 
     return (
         <div className='bg-gray-200 w-screen flex justify-between px-12 sticky pt-3'>
-            <div className='flex items-center justify-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
-                <span className="w-16 h-12 icon-[streamline--pets-allowed]"></span>
+            <div className='flex items-center gap-x-2 justify-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
+                <span className="w-16 h-14 icon-[streamline--pets-allowed]"></span>
                 <h2 className='font-main'>HOMEFORPAWS</h2>
             </div>
 
