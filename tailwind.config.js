@@ -12,9 +12,19 @@ module.exports = {
         quaternary: "#F4A261",
         fifth: '#E76F51'
       },
+
       fontFamily: {
         main: ['PoetsenOne', 'sans']
-      }
+      },
+
+      screens: {
+        'xxsm': '300px',
+        'xsm': '600px',
+        'sm': '700px',
+        'md': '800px',
+        'lg': '1024px',
+        'xl': '1280px',
+      },
     },
   },
 

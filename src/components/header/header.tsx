@@ -6,13 +6,13 @@ export const Header = () => {
     };
 
     return (
-        <div className='bg-gray-200 w-screen flex justify-between px-12 sticky pt-3'>
+        <div className='bg-gray-200 w-screen flex justify-between xsm:px-12 xxsm:px-6 sticky pt-3'>
             <div className='flex items-center gap-x-2 justify-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
-                <span className="w-16 h-14 icon-[streamline--pets-allowed]"></span>
-                <h2 className='font-main'>HOMEFORPAWS</h2>
+                <span className="md:w-16 md:h-14 xsm:w-10 xsm:h-8 icon-[streamline--pets-allowed]"></span>
+                <h2 className='font-main md:text-2xl xsm:text-base xsm:block xxsm:hidden'>HOMEFORPAWS</h2>
             </div>
 
-            <div className='flex gap-x-12 items-center font-medium'>
+            <div className='flex xsm:gap-x-12 xxsm:gap-x-4 items-center font-medium xsm:text-base xxsm:text-sm'>
                 <div className='flex gap-x-1 items-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
                     <span className="icon-[material-symbols--home]"></span>
                     <a className='transition duration-300' href='#home'>Inicio</a>

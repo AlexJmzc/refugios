@@ -38,7 +38,7 @@ export const Container = () => {
         <Search setSearch={setSearch}/>
       </div>
   
-      <div className='grid grid-cols-4 h-fit place-items-center'>
+      <div className='grid lg:grid-cols-4 md:grid-cols-3 xsm:grid-cols-2 h-fit place-items-center'>
         {
           data.length >= 8
           ?
