@@ -8,17 +8,17 @@ export const Footer = () => {
 
   return (
     <div className='w-screen bg-gray-200 py-4' id='help'>
-      <div className='bg-gradient-to-r from-red-100 via-gray-100 to-violet-100  grid xsm:grid-cols-2 xxsm:grid-cols-1 rounded-2xl mx-7 py-6 gap-y-3'>
+      <div className='bg-gradient-to-r from-red-100 via-gray-100 to-violet-100  grid xsm:grid-cols-2 hsm:grid-cols-1 rounded-2xl mx-7 py-6 gap-y-3'>
         <div className='flex justify-center items-center'>
           <img className='w-2/3 rounded-e-full' src={FooterImage} alt="Help" />
         </div>
 
-        <div className='flex flex-col items-center md:gap-y-5 xsm:gap-y-4 xxsm:gap-y-3'>
+        <div className='flex flex-col items-center md:gap-y-5 xsm:gap-y-4 hsm:gap-y-3'>
           <h2 className='font-bold md:text-lg sm:text-base xsm:text-sm'>
             ¿Cómo puedes ayudar?
           </h2>
 
-          <h2 className="font-medium text-justify sm:text-base xsm:text-sm md:mr-0 xsm:mr-4 xsm:px-0 xxsm:px-4">
+          <h2 className="font-medium text-justify sm:text-base xsm:text-sm md:mr-0 xsm:mr-4 xsm:px-0 hsm:px-4">
             Puedes enviar la información sobre algún refugio que no se encuentre en esta web
             a nuestras redes sociales con este formato:
           </h2>
