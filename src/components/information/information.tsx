@@ -7,7 +7,7 @@ export const Information = () => {
   }
 
   return (
-    <div className='bg-gray-200 w-screen flex justify-center min-h-max pt-4' id='home'>
+    <div className='bg-gray-200 w-screen flex justify-center min-h-max pt-10' id='home'>
       <div className='flex justify-center rounded-3xl relative'>
         <img className='w-11/12 rounded-3xl' src={Main} alt='Refugios' />
         <div className='absolute w-11/12 left-1/2 transform -translate-x-1/2 inset-0 bg-gradient-to-r from-violet-800 via-blue-800/75 to-transparent rounded-3xl'></div>

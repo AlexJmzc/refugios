@@ -18,7 +18,7 @@ export const Footer = () => {
             ¿Cómo puedes ayudar?
           </h2>
 
-          <h2 className="font-medium text-justify sm:text-base xsm:text-sm md:mr-0 xsm:mr-4 xsm:px-0 hsm:px-4">
+          <h2 className="font-medium text-justify sm:text-base xsm:text-sm xsm:mr-4 xsm:px-0 hsm:px-4">
             Puedes enviar la información sobre algún refugio que no se encuentre en esta web
             a nuestras redes sociales con este formato:
           </h2>
