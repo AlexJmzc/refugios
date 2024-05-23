@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import { refugeesData } from '../../assets/data/refugees';
+import { SheltersData } from '../../assets/data/shelters';
 import { Card } from "../card/card";
 import { Paginator } from "../paginator/paginator";
 import { Search } from "../search/search";
-import { Refugee } from "../../assets/interfaces/refugee";
+import { Shelter } from "../../assets/interfaces/shelter";
 
 export const Container = () => {
-  const [data, setData] = useState<Refugee[]>(refugeesData);
-  const [refugees, setRefugees] = useState(0);
+  const [data, setData] = useState<Shelter[]>(SheltersData);
+  const [shelters, setShelters] = useState(0);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    const filtered = refugeesData.filter((item) => {
+    const filtered = SheltersData.filter((item) => {
       const country = item.country.toUpperCase();
       const state = item.state?.toUpperCase();
       const city = item.city?.toUpperCase();
@@ -33,7 +33,7 @@ export const Container = () => {
   }, [search])
 
   return (
-    <div className='bg-gray-200 min-h-screen w-screen py-6' id='refugees'>
+    <div className='bg-gray-200 min-h-screen w-screen py-6' id='Shelters'>
       <div className='flex flex-col items-center justify-center py-6'>
         <Search setSearch={setSearch}/>
       </div>
@@ -42,16 +42,16 @@ export const Container = () => {
         {
           data.length >= 8
           ?
-            data?.slice(refugees, refugees + 8).map((refugee) => (
-              <Card refugee={refugee} />
+            data?.slice(shelters, shelters + 8).map((Shelter) => (
+              <Card shelter={Shelter} />
             ))
           :
-            data?.map((refugee) => (
-              <Card refugee={refugee} />
+            data?.map((shelter) => (
+              <Card shelter={shelter} />
             ))
         }
       </div>
-      <Paginator refugees={refugees} data={data} setRefugees={setRefugees}/>
+      <Paginator shelters={shelters} data={data} setShelters={setShelters}/>
     </div>
   )
 }

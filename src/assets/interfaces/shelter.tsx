@@ -1,4 +1,4 @@
-export interface Refugee {
+export interface Shelter {
     id: number,
     name: string,
     web: string,

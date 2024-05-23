@@ -1,10 +1,10 @@
-import { Refugee } from '../interfaces/refugee';
+import { Shelter } from '../interfaces/shelter'
 
-//! REFUGEES IMAGES
+//! SHELTERS IMAGES
 import Refugee1 from './img/refugio1.jpg';
 
 
-export const refugeesData: Refugee[] = [
+export const SheltersData: Shelter[] = [
     {
         id: 1,
         name: "Refugio 1",
