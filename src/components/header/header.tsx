@@ -6,7 +6,7 @@ export const Header = () => {
     };
 
     return (
-        <div className='bg-gray-200 w-screen flex justify-between xsm:px-12 hsm:px-6 sticky top-0 z-50 pt-3'>
+        <div className='bg-gray-200 w-screen hsm:pb-4 sm:pb-0 flex justify-between xsm:px-12 hsm:px-6 sticky top-0 z-50 pt-3'>
             <div className='flex items-center gap-x-2 justify-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
                 <span className="md:w-16 md:h-14 xsm:w-10 xsm:h-8 icon-[streamline--pets-allowed]"></span>
                 <h2 className='font-main md:text-2xl xsm:text-base xsm:block hsm:hidden'>HOMEFORPAWS</h2>
@@ -18,9 +18,9 @@ export const Header = () => {
                     <a className='transition duration-300' href='#home'>Inicio</a>
                 </div>
 
-                <div className='flex gap-x-1 items-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('refugees'); }}>
+                <div className='flex gap-x-1 items-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('shelters'); }}>
                     <span className="icon-[teenyicons--paws-outline]"></span>
-                    <a className='transition duration-300' href='#refugees'>Refugios</a>
+                    <a className='transition duration-300' href='#shelters'>Refugios</a>
                 </div>
 
                 <div className='flex gap-x-1 items-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('help'); }}>

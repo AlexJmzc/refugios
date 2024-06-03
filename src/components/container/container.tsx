@@ -33,7 +33,7 @@ export const Container = () => {
   }, [search])
 
   return (
-    <div className='bg-gray-200 min-h-screen w-screen py-6' id='Shelters'>
+    <div className='bg-gray-200 min-h-screen w-screen py-6' id='shelters'>
       <div className='flex flex-col items-center justify-center py-6'>
         <Search setSearch={setSearch}/>
       </div>
