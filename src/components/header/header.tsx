@@ -1,4 +1,10 @@
-export const Header = () => {
+interface LanguageProps {
+    language: string,
+    setLanguage: (language: string) => void
+}
+
+
+export const Header = ( { language, setLanguage }: LanguageProps ) => {
 
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);

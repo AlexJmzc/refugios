@@ -1,6 +1,12 @@
 import Main from '../../assets/img/mainImage.jpg';
 
-export const Information = () => {
+
+interface informationProps {
+  language: string
+}
+
+
+export const Information = ( { language }: informationProps ) => {
 
   const redirect = (url: string) => {
     window.location.href = url;

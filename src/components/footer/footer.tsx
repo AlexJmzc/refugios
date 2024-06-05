@@ -1,6 +1,10 @@
 import FooterImage from '../../assets/img/footerImage.jpg';
 
-export const Footer = () => {
+interface footerProps {
+  language: string
+}
+
+export const Footer = ( { language }:footerProps ) => {
 
   const redirect = (url: string) => {
     window.location.href = url;

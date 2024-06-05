@@ -9,10 +9,10 @@ export const Main = () => {
 
   return (
     <>
-        <Header/>
-        <Information/>
-        <Container/>
-        <Footer/>
+        <Header language={language} setLanguage={setLanguage}/>
+        <Information language={language}/>
+        <Container language={language}/>
+        <Footer language={language}/>
     </>
   )
 }

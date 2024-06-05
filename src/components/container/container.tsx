@@ -5,7 +5,12 @@ import { Paginator } from "../paginator/paginator";
 import { Search } from "../search/search";
 import { Shelter } from "../../assets/interfaces/shelter";
 
-export const Container = () => {
+interface containerProps {
+  language: string
+}
+
+export const Container = ( { language }:containerProps) => {
+  
   const [data, setData] = useState<Shelter[]>(SheltersData);
   const [shelters, setShelters] = useState(0);
   const [search, setSearch] = useState("");
