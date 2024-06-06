@@ -1,10 +1,24 @@
 import FooterImage from '../../assets/img/footerImage.jpg';
+import { useEffect } from 'react';
 
 interface footerProps {
   language: string
 }
 
 export const Footer = ( { language }:footerProps ) => {
+
+  useEffect(() => {
+    switch (language) {
+      case 'English':
+          
+          break;
+    
+      default:
+
+          break;
+    }
+    
+  }, [language])
 
   const redirect = (url: string) => {
     window.location.href = url;

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Main from '../../assets/img/mainImage.jpg';
 
 
@@ -7,6 +8,19 @@ interface informationProps {
 
 
 export const Information = ( { language }: informationProps ) => {
+
+  useEffect(() => {
+    switch (language) {
+      case 'English':
+          
+          break;
+    
+      default:
+
+          break;
+    }
+    
+  }, [language])
 
   const redirect = (url: string) => {
     window.location.href = url;

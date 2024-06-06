@@ -16,6 +16,19 @@ export const Container = ( { language }:containerProps) => {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
+    switch (language) {
+      case 'English':
+          
+          break;
+    
+      default:
+
+          break;
+    }
+    
+  }, [language])
+
+  useEffect(() => {
     const filtered = SheltersData.filter((item) => {
       const country = item.country.toUpperCase();
       const state = item.state?.toUpperCase();

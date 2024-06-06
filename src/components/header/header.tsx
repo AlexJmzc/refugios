@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 interface LanguageProps {
     language: string,
     setLanguage: (language: string) => void
@@ -6,10 +7,30 @@ interface LanguageProps {
 
 export const Header = ( { language, setLanguage }: LanguageProps ) => {
 
+    useEffect(() => {
+      switch (language) {
+        case 'English':
+            
+            break;
+      
+        default:
+
+            break;
+      }
+      
+    }, [language])
+
+
+    const languageChange = (id: number) => {
+        setLanguage(language);
+    }
+
+
     const scrollToSection = (sectionId: string) => {
         const section = document.getElementById(sectionId);
         section && section.scrollIntoView({ behavior: 'smooth' });
     };
+
 
     return (
         <div className='bg-gray-200 w-screen hsm:pb-4 sm:pb-0 flex justify-between xsm:px-12 hsm:px-6 sticky top-0 z-50 pt-3'>
