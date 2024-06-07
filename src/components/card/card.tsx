@@ -1,12 +1,27 @@
-import { Shelter } from '../../assets/interfaces/shelter';
+import { useEffect } from 'react';
 
+import { Shelter } from '../../assets/interfaces/shelter';
 import { flags } from '../../assets/flags/flags';
 
 interface CardProps {
-  shelter: Shelter;
+  shelter: Shelter,
+  language: string
 }
 
-export const Card = ({ shelter }: CardProps) => {
+export const Card = ({ shelter, language }: CardProps) => {
+
+  useEffect(() => {
+    switch (language) {
+      case 'English':
+          
+          break;
+    
+      default:
+
+          break;
+    }
+    
+  }, [language])
 
   const getFlags = (country: String) => {
     const countryFormatted = country.toUpperCase();

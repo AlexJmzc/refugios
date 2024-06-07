@@ -4,7 +4,8 @@ import { Shelter } from '../../assets/interfaces/shelter';
 interface PaginatorProps {
     shelters: number,
     setShelters: (shelters: number) => void,
-    data: Shelter[]
+    data: Shelter[],
+    language: string
 }
 
 export const Paginator = ({ shelters, data, setShelters }: PaginatorProps) => {

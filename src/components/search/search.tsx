@@ -1,8 +1,25 @@
+import { useEffect } from 'react';
+
 interface SearchProps {
-    setSearch: React.Dispatch<React.SetStateAction<string>>
+    setSearch: React.Dispatch<React.SetStateAction<string>>,
+    language: string
 }
 
-export const Search = ( {setSearch}: SearchProps ) => {
+export const Search = ( {setSearch, language}: SearchProps ) => {
+
+    useEffect(() => {
+        switch (language) {
+          case 'English':
+              
+              break;
+        
+          default:
+    
+              break;
+        }
+        
+      }, [language])
+      
 
     const handleInputChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
         const inputValue = e.target.value;

@@ -53,7 +53,7 @@ export const Container = ( { language }:containerProps) => {
   return (
     <div className='bg-gray-200 min-h-screen w-screen py-6' id='shelters'>
       <div className='flex flex-col items-center justify-center py-6'>
-        <Search setSearch={setSearch}/>
+        <Search setSearch={setSearch} language={language}/>
       </div>
   
       <div className='grid lg:grid-cols-4 md:grid-cols-3 xsm:grid-cols-2 h-fit place-items-center'>
@@ -61,15 +61,15 @@ export const Container = ( { language }:containerProps) => {
           data.length >= 8
           ?
             data?.slice(shelters, shelters + 8).map((Shelter) => (
-              <Card shelter={Shelter} />
+              <Card shelter={Shelter} language={language}/>
             ))
           :
             data?.map((shelter) => (
-              <Card shelter={shelter} />
+              <Card shelter={shelter} language={language}/>
             ))
         }
       </div>
-      <Paginator shelters={shelters} data={data} setShelters={setShelters}/>
+      <Paginator shelters={shelters} data={data} setShelters={setShelters} language={language}/>
     </div>
   )
 }
