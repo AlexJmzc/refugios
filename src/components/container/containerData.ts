@@ -1,3 +1,7 @@
-export const englishData = {}
+export const englishData = {
+    btnText: 'View more'
+}
 
-export const spanishData = {}
+export const spanishData = {
+    btnText: 'Ver más'
+}
