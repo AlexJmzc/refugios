@@ -1,7 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Shelter } from '../../assets/interfaces/shelter';
 import { flags } from '../../assets/flags/flags';
+
+import { englishData, spanishData } from './cardData';
 
 interface CardProps {
   shelter: Shelter,
@@ -10,14 +12,16 @@ interface CardProps {
 
 export const Card = ({ shelter, language }: CardProps) => {
 
+  const [cardData, setCardData] = useState(spanishData);
+
   useEffect(() => {
     switch (language) {
       case 'English':
-          
+          setCardData(englishData);
           break;
     
       default:
-
+          setCardData(spanishData);
           break;
     }
     
@@ -59,7 +63,7 @@ export const Card = ({ shelter, language }: CardProps) => {
 
         <div className='flex flex-col items-center'>
           <a href={shelter.web} className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-fifth rounded-lg hover:bg-secondary focus:ring-4 focus:outline-none focus:bg-secondary">
-            Más información
+            { cardData.btnText }
             <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
             </svg>

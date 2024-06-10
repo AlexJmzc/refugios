@@ -1,4 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
+import { englishData, spanishData } from './searchData';
 
 interface SearchProps {
     setSearch: React.Dispatch<React.SetStateAction<string>>,
@@ -7,14 +9,16 @@ interface SearchProps {
 
 export const Search = ( {setSearch, language}: SearchProps ) => {
 
+    const [searchData, setSearchData] = useState(spanishData);
+
     useEffect(() => {
         switch (language) {
           case 'English':
-              
+              setSearchData(englishData);
               break;
         
           default:
-    
+              setSearchData(spanishData);
               break;
         }
         
@@ -38,7 +42,7 @@ export const Search = ( {setSearch, language}: SearchProps ) => {
                     type="search" 
                     id="search" 
                     className="block w-72 p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-white dark:bg-white dark:border-gray-600 dark:placeholder-gray-500" 
-                    placeholder="Pais, Provincia o Ciudad" 
+                    placeholder={ searchData.placeholder }
                     onChange={handleInputChange}
                 />
             </div>

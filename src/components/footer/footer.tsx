@@ -1,5 +1,7 @@
 import FooterImage from '../../assets/img/footerImage.jpg';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
+import { englishData, spanishData } from './footerData';
 
 interface footerProps {
   language: string
@@ -7,14 +9,16 @@ interface footerProps {
 
 export const Footer = ( { language }:footerProps ) => {
 
+  const [footerData, setFooterData] = useState(spanishData);
+
   useEffect(() => {
     switch (language) {
       case 'English':
-          
+          setFooterData(englishData);
           break;
     
       default:
-
+          setFooterData(spanishData);
           break;
     }
     
@@ -33,20 +37,19 @@ export const Footer = ( { language }:footerProps ) => {
 
         <div className='flex flex-col items-center md:gap-y-5 xsm:gap-y-4 hsm:gap-y-3'>
           <h2 className='font-bold md:text-lg sm:text-base xsm:text-sm'>
-            ¿Cómo puedes ayudar?
+            { footerData.title }
           </h2>
 
           <h2 className="font-medium text-justify sm:text-base xsm:text-sm xsm:mr-4 xsm:px-0 hsm:px-4">
-            Puedes enviar la información sobre algún refugio que no se encuentre en esta web
-            a nuestras redes sociales con este formato:
+            { footerData.subtitle }
           </h2>
 
           <div className='bg-white grid grid-cols-1 gap-y-4 justify-items-center p-6 md:w-3/5 xsm:w-4/5 rounded-3xl font-semibold'>
             <div className=' flex flex-col items-center w-auto'>
-              <h2>Página web</h2>
-              <h2>Nombre del refugio</h2>
-              <h2>País</h2>
-              <h2>Ciudad</h2>
+              <h2>{ footerData.web }</h2>
+              <h2>{ footerData.name }</h2>
+              <h2>{ footerData.country }</h2>
+              <h2>{ footerData.city }</h2>
             </div>
 
             <div className='flex justify-center items-center gap-x-4'>

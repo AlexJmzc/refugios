@@ -1,4 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { englishData, spanishData } from './headerData';
+
 interface LanguageProps {
     language: string,
     setLanguage: (language: string) => void
@@ -7,14 +9,16 @@ interface LanguageProps {
 
 export const Header = ( { language, setLanguage }: LanguageProps ) => {
 
+    const [headerData, setHeaderData] = useState(spanishData);
+
     useEffect(() => {
       switch (language) {
         case 'English':
-            
+            setHeaderData(englishData);
             break;
       
         default:
-
+            setHeaderData(spanishData);
             break;
       }
       
@@ -42,17 +46,17 @@ export const Header = ( { language, setLanguage }: LanguageProps ) => {
             <div className='flex xsm:gap-x-12 hsm:gap-x-4 items-center font-medium xsm:text-base hsm:text-sm'>
                 <div className='flex gap-x-1 items-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
                     <span className="icon-[material-symbols--home]"></span>
-                    <a className='transition duration-300' href='#home'>Inicio</a>
+                    <a className='transition duration-300' href='#home'>{ headerData.home }</a>
                 </div>
 
                 <div className='flex gap-x-1 items-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('shelters'); }}>
                     <span className="icon-[teenyicons--paws-outline]"></span>
-                    <a className='transition duration-300' href='#shelters'>Refugios</a>
+                    <a className='transition duration-300' href='#shelters'>{ headerData.shelters }</a>
                 </div>
 
                 <div className='flex gap-x-1 items-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('help'); }}>
                 <span className="icon-[material-symbols--help]"></span>
-                    <a className='transition duration-300' href='#help'>Ayuda</a>
+                    <a className='transition duration-300' href='#help'>{ headerData.help }</a>
                 </div>
 
             </div>

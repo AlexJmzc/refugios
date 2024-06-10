@@ -10,23 +10,10 @@ interface containerProps {
 }
 
 export const Container = ( { language }:containerProps) => {
-  
+
   const [data, setData] = useState<Shelter[]>(SheltersData);
   const [shelters, setShelters] = useState(0);
   const [search, setSearch] = useState("");
-
-  useEffect(() => {
-    switch (language) {
-      case 'English':
-          
-          break;
-    
-      default:
-
-          break;
-    }
-    
-  }, [language])
 
   useEffect(() => {
     const filtered = SheltersData.filter((item) => {
@@ -49,6 +36,7 @@ export const Container = ( { language }:containerProps) => {
     setData(filtered.slice().reverse());
 
   }, [search])
+  
 
   return (
     <div className='bg-gray-200 min-h-screen w-screen py-6' id='shelters'>
