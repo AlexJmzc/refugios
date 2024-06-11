@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { englishData, spanishData } from './headerData';
+import { Switch } from '../switch/switch';
 
 interface LanguageProps {
     language: string,
@@ -7,21 +8,21 @@ interface LanguageProps {
 }
 
 
-export const Header = ( { language, setLanguage }: LanguageProps ) => {
+export const Header = ({ language, setLanguage }: LanguageProps) => {
 
     const [headerData, setHeaderData] = useState(spanishData);
 
     useEffect(() => {
-      switch (language) {
-        case 'English':
-            setHeaderData(englishData);
-            break;
-      
-        default:
-            setHeaderData(spanishData);
-            break;
-      }
-      
+        switch (language) {
+            case 'English':
+                setHeaderData(englishData);
+                break;
+
+            default:
+                setHeaderData(spanishData);
+                break;
+        }
+
     }, [language])
 
 
@@ -46,18 +47,20 @@ export const Header = ( { language, setLanguage }: LanguageProps ) => {
             <div className='flex xsm:gap-x-12 hsm:gap-x-4 items-center font-medium xsm:text-base hsm:text-sm'>
                 <div className='flex gap-x-1 items-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
                     <span className="icon-[material-symbols--home]"></span>
-                    <a className='transition duration-300' href='#home'>{ headerData.home }</a>
+                    <a className='transition duration-300' href='#home'>{headerData.home}</a>
                 </div>
 
                 <div className='flex gap-x-1 items-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('shelters'); }}>
                     <span className="icon-[teenyicons--paws-outline]"></span>
-                    <a className='transition duration-300' href='#shelters'>{ headerData.shelters }</a>
+                    <a className='transition duration-300' href='#shelters'>{headerData.shelters}</a>
                 </div>
 
                 <div className='flex gap-x-1 items-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('help'); }}>
-                <span className="icon-[material-symbols--help]"></span>
-                    <a className='transition duration-300' href='#help'>{ headerData.help }</a>
+                    <span className="icon-[material-symbols--help]"></span>
+                    <a className='transition duration-300' href='#help'>{headerData.help}</a>
                 </div>
+
+                <Switch />
 
             </div>
         </div>
