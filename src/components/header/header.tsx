@@ -26,8 +26,8 @@ export const Header = ({ language, setLanguage }: LanguageProps) => {
     }, [language])
 
 
-    const languageChange = (id: number) => {
-        setLanguage(language);
+    const languageChange = (id: string) => {
+        setLanguage(id);
     }
 
 
@@ -60,7 +60,7 @@ export const Header = ({ language, setLanguage }: LanguageProps) => {
                     <a className='transition duration-300' href='#help'>{headerData.help}</a>
                 </div>
 
-                <Switch />
+                <Switch language={language} changeLanguage={languageChange}/>
 
             </div>
         </div>

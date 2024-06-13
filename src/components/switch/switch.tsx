@@ -1,12 +1,40 @@
-import React from 'react'
+import { useState } from 'react';
 
-export const Switch = () => {
+
+interface SwitchProps
+ {
+    language: string;
+    changeLanguage: (id: string) => void;
+ }
+
+export const Switch = ( { language }: SwitchProps ) => {
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleToggle = () => {
+        setIsChecked(!isChecked);
+        
+    };
+
+
     return (
-        <div className="relative inline-block w-12 h-6">
-            <input type="checkbox" className="absolute opacity-0 w-0 h-0" />
-            <div className="slider absolute top-0 left-0 right-0 bottom-0 bg-gray-300 rounded-full transition duration-300">
-                <div className="before absolute w-6 h-6 rounded-full bg-white transform transition-transform translate-x-4"></div>
-            </div>
-        </div>
+        <label className="relative inline-block w-14 h-7">
+            <input
+                type="checkbox"
+                className="opacity-0 w-0 h-0 peer"
+                checked={isChecked}
+                onChange={handleToggle}
+            />
+            <span
+                className={`absolute cursor-pointer inset-0 bg-gray-300 transition duration-300 rounded-full ${
+                    isChecked ? `bg-violet-600` : `bg-yellow-500`
+                }`}
+            ></span>
+            <span
+                className={`absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition-transform duration-300 ${
+                    isChecked ? 'translate-x-7' : 'translate-x-0'
+                }`}
+            ></span>
+        </label>
     )
 }
