@@ -7,13 +7,16 @@ interface SwitchProps
     changeLanguage: (id: string) => void;
  }
 
-export const Switch = ( { language }: SwitchProps ) => {
+export const Switch = ( { language, changeLanguage }: SwitchProps ) => {
 
     const [isChecked, setIsChecked] = useState(false);
 
     const handleToggle = () => {
         setIsChecked(!isChecked);
+
+        let id = isChecked ? 'Spanish' : 'English';
         
+        changeLanguage(id);
     };
 
 
