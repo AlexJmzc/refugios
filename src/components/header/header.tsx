@@ -60,7 +60,7 @@ export const Header = ({ language, setLanguage }: LanguageProps) => {
                     <a className='transition duration-300' href='#help'>{headerData.help}</a>
                 </div>
 
-                <Switch language={language} changeLanguage={languageChange}/>
+                <Switch changeLanguage={languageChange}/>
 
             </div>
         </div>
