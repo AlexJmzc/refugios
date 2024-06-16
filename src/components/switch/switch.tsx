@@ -1,13 +1,15 @@
 import { useState } from 'react';
 
+import usaFlag from '../../assets/img/usa1.png';
+import ecFlag from '../../assets/img/ec1.png';
+
 
 interface SwitchProps
  {
-    language: string;
     changeLanguage: (id: string) => void;
  }
 
-export const Switch = ( { language, changeLanguage }: SwitchProps ) => {
+export const Switch = ( { changeLanguage }: SwitchProps ) => {
 
     const [isChecked, setIsChecked] = useState(false);
 
@@ -37,6 +39,11 @@ export const Switch = ( { language, changeLanguage }: SwitchProps ) => {
                 className={`absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition-transform duration-300 ${
                     isChecked ? 'translate-x-7' : 'translate-x-0'
                 }`}
+
+                style={{
+                    backgroundImage: `url(${isChecked ? ecFlag : usaFlag})`,
+                    backgroundSize: 'cover',
+                }}
             ></span>
         </label>
     )
