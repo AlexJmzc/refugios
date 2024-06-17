@@ -32,16 +32,15 @@ export const Switch = ( { changeLanguage }: SwitchProps ) => {
             />
             <span
                 className={`absolute cursor-pointer inset-0 bg-gray-300 transition duration-300 rounded-full ${
-                    isChecked ? `bg-violet-600` : `bg-yellow-500`
+                    isChecked ? `bg-violet-600` : `bg-violet-700`
                 }`}
             ></span>
             <span
-                className={`absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition-transform duration-300 ${
-                    isChecked ? 'translate-x-7' : 'translate-x-0'
-                }`}
+                className={`absolute left-1 top-1 w-5 h-5 bg-white rounded-full transition-transform duration-300 cursor-pointer
+                    ${isChecked ? 'translate-x-7' : 'translate-x-0'}`}
 
                 style={{
-                    backgroundImage: `url(${isChecked ? ecFlag : usaFlag})`,
+                    backgroundImage: `url(${isChecked ? usaFlag : ecFlag})`,
                     backgroundSize: 'cover',
                 }}
             ></span>
