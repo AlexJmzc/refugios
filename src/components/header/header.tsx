@@ -43,12 +43,12 @@ export const Header = ({ language, setLanguage }: LanguageProps) => {
         <div className='bg-gray-200 w-screen hsm:pb-4 sm:pb-0 flex justify-between xsm:px-12 hsm:px-6 sticky top-0 z-50 pt-3'>
             <div className='flex items-center gap-x-2 justify-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
                 <img src={logo}
-                 className='md:w-12 md:h-12 xsm:w-10 xsm:h-10'
+                 className='md:w-12 md:h-12 hsm:w-10 hsm:h-10'
                  alt="Logo" />
-                <h2 className='font-main text-violet-800 md:text-2xl xsm:text-base xsm:block hsm:hidden'>HOMEFORPAWS</h2>
+                <h2 className='font-main text-violet-800 md:text-2xl xsm:text-base sm:block hsm:hidden'>HOMEFORPAWS</h2>
             </div>
 
-            <div className='flex xsm:gap-x-12 hsm:gap-x-4 items-center font-medium xsm:text-base hsm:text-sm'>
+            <div className='flex xxsm:gap-x-10 hsm:gap-x-4 items-center font-medium xsm:text-base hsm:text-sm'>
                 <div className='flex gap-x-1 items-center cursor-pointer' onClick={(e) => { e.preventDefault(); scrollToSection('home'); }}>
                     <span className="icon-[material-symbols--home]"></span>
                     <a className='transition duration-300' href='#home'>{headerData.home}</a>
